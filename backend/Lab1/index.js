@@ -1,4 +1,4 @@
-const { EventEmitter } = require("node:events");
+import { EventEmitter } from "node:events";
 
 const task = new EventEmitter();
 
@@ -19,7 +19,7 @@ task.on("exit", () => {
 });
 
 task.on("start", (course) => {
-    console.log('${course} started');
+    console.log(`${course} started`);
 });
 
 

@@ -27,8 +27,8 @@ button.addEventListner('click',()=>{
 
 function handleClick(event){
     console.log('Button clicked');
-    console.log('Event Type: ${event.type}');
-    console.log('message: ${event.detail}' ) ;
+    console.log(`Event Type: ${event.type}`);
+    console.log(`message: ${event.detail}`) ;
 }
 
 button.addEventListner("click", handleClick);

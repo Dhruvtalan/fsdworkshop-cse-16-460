@@ -4,18 +4,27 @@ const filepath = "userdata.txt";
 
 async function createfile(content){
     try{
-        await fs.writefile(filepath, content, "utf8");
+        await fs.writeFile(filepath, content, "utf8");
         console.log("file created successfully! ");
     } 
     catch (err){
-        console.error
+        console.error(err);
     }
 }
 
 async function readfile(){
     try{
-        const data = await fs.readfile(filepath, "utf8");
+        const data = await fs.readFile(filepath, "utf8");
         console.log ("file content:\n",data);
         return data;
-    } catch 
+    } catch (err) {
+        console.error(err);
+    }
 }
+
+async function main(){
+    await createfile("Hello from Lab1 filedemo!");
+    await readfile();
+}
+
+main();
